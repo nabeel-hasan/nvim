@@ -1,4 +1,4 @@
-" Vim Plugins
+" Vim PluginsV
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -10,7 +10,10 @@ Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'JuliaEditorSupport/julia-vim'
-Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'mechatroner/rainbow_csv'
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'vim-python/python-syntax'
+Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()
 
@@ -44,21 +47,25 @@ colorscheme onedark
 
 "Customizing lightline color
 let g:lightline = {
-        \ 'colorscheme': 'material',
+        \ 'colorscheme': 'monokai_tasty',
         \ }
 
 "NerdTree mapping
 map <C-n> :NERDTreeToggle<CR>
 
 
+" Key re-mapping
+
 " Terminal exit mapping
 tnoremap <ESC><ESC> <C-\><C-N>
 
+" Buffer mapping
+nnoremap <C-o> :bprev<CR>                                                                            
+nnoremap <C-p> :bnext<CR>
 
-" Rainbow parenthesis activation
-let g:rainbow_active = 1    "set to 0 if you want to enable it later via :RainbowToggle
 
-
+" highlights built-in modules in python
+let g:python_highlight_all = 1
 
 
 
