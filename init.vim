@@ -14,6 +14,7 @@ Plug 'mechatroner/rainbow_csv'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'vim-python/python-syntax'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -47,7 +48,7 @@ colorscheme onedark
 
 "Customizing lightline color
 let g:lightline = {
-        \ 'colorscheme': 'monokai_tasty',
+        \ 'colorscheme': 'materia',
         \ }
 
 "NerdTree mapping
@@ -59,9 +60,10 @@ map <C-n> :NERDTreeToggle<CR>
 " Terminal exit mapping
 tnoremap <ESC><ESC> <C-\><C-N>
 
+
 " Buffer mapping
-nnoremap <C-o> :bprev<CR>                                                                            
-nnoremap <C-p> :bnext<CR>
+nnoremap <C-j> :tabprevious<CR>                                                                            
+nnoremap <C-k> :tabnext<CR>
 
 
 " highlights built-in modules in python
