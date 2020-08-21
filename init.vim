@@ -1,4 +1,4 @@
-" Vim PluginsV
+" Vim Plugins
 
 
 call plug#begin('~/.config/nvim/plugged')
@@ -8,13 +8,11 @@ Plug 'joshdick/onedark.vim'
 Plug 'preservim/nerdtree'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'mechatroner/rainbow_csv'
-Plug 'patstockwell/vim-monokai-tasty'
 Plug 'vim-python/python-syntax'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -42,8 +40,8 @@ set splitbelow              " new file open in under split
 "set nowrap                  " screen keeps on extending
 
 " Colorscheme
-let g:onedark_termcolors=256
-colorscheme onedark
+"let g:onedark_termcolors=256
+colorscheme dracula
 
 
 "Customizing lightline color
@@ -51,8 +49,9 @@ let g:lightline = {
         \ 'colorscheme': 'materia',
         \ }
 
-"NerdTree mapping
-map <C-n> :NERDTreeToggle<CR>
+
+" highlights built-in modules in python
+let g:python_highlight_all = 1
 
 
 " Key re-mapping
@@ -66,8 +65,8 @@ nnoremap <C-j> :tabprevious<CR>
 nnoremap <C-k> :tabnext<CR>
 
 
-" highlights built-in modules in python
-let g:python_highlight_all = 1
+"NerdTree mapping
+map <C-n> :NERDTreeToggle<CR>
 
 
 
