@@ -13,14 +13,18 @@ Plug 'mechatroner/rainbow_csv'
 Plug 'vim-python/python-syntax'
 Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'sickill/vim-monokai'
+Plug 'rust-lang/rust.vim'
+Plug 'metakirby5/codi.vim'
 
 call plug#end()
 
 
 " basic setting
 
-filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on                   " syntax highlighting
+filetype plugin indent on   " allows auto-indenting depending on file type
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching brackets.
 set ignorecase              " case insensitive matching
@@ -37,11 +41,12 @@ set noswapfile              " disables swapfiles
 set incsearch               " highlights the search word
 set splitright              " new file open in right split
 set splitbelow              " new file open in under split
+
 "set nowrap                  " screen keeps on extending
 
 " Colorscheme
-"let g:onedark_termcolors=256
-colorscheme dracula
+let g:onedark_termcolors=256
+colorscheme onedark
 
 
 "Customizing lightline color
@@ -52,6 +57,16 @@ let g:lightline = {
 
 " highlights built-in modules in python
 let g:python_highlight_all = 1
+
+"Codi Config
+
+"Change the color
+highlight CodiVirtualText guifg=cyan     
+
+let g:codi#virtual_text_prefix = "❯ "
+let g:codi#aliases = {
+                   \ 'python.py': 'python',
+                   \ }
 
 
 " Key re-mapping
@@ -64,11 +79,12 @@ tnoremap <ESC><ESC> <C-\><C-N>
 nnoremap <C-j> :tabprevious<CR>                                                                            
 nnoremap <C-k> :tabnext<CR>
 
+" autocompletion insert mode
+:inoremap <A-z> <C-P>
+
 
 "NerdTree mapping
 map <C-n> :NERDTreeToggle<CR>
-
-
 
 
 
