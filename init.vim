@@ -17,6 +17,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'sickill/vim-monokai'
 Plug 'rust-lang/rust.vim'
 Plug 'metakirby5/codi.vim'
+Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
 
@@ -83,7 +84,7 @@ nnoremap <C-k> :tabnext<CR>
 :inoremap <A-z> <C-P>
 
 
-"NerdTree mapping
+" NerdTree mapping
 map <C-n> :NERDTreeToggle<CR>
 
 
